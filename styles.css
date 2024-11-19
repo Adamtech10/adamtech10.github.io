@@ -1,0 +1,84 @@
+/* Fond extensible et responsive */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Container global */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Section profil */
+.profile {
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+/* Boutons */
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown */
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  margin-top: 5px;
+}
+
+.dropdown-content .sub-button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 12px 16px;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown-content .sub-button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content.show {
+  max-height: 500px;
+  opacity: 1;
+}
